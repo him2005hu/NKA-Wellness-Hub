@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Brij Kishore Asawa Events | Luxury Event Management</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary": "#c8c6c5",
+                        "on-primary": "#3d1f6a",
+                        "on-surface": "#e2e2e2",
+                        "primary-container": "#2d0b5a",
+                        "on-primary-fixed-variant": "#543782",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "secondary-fixed-dim": "#e9c349",
+                        "on-background": "#e2e2e2",
+                        "secondary-container": "#af8d11",
+                        "inverse-primary": "#6d4f9c",
+                        "surface-variant": "#333535",
+                        "secondary": "#e9c349",
+                        "on-secondary-container": "#342800",
+                        "tertiary-container": "#212121",
+                        "on-tertiary-fixed-variant": "#474646",
+                        "on-secondary-fixed": "#241a00",
+                        "surface-container-lowest": "#0c0f0f",
+                        "on-tertiary-container": "#8a8888",
+                        "surface-dim": "#121414",
+                        "error-container": "#93000a",
+                        "surface-container-high": "#282a2b",
+                        "error": "#ffb4ab",
+                        "primary-fixed-dim": "#d6baff",
+                        "on-secondary": "#3c2f00",
+                        "surface-container-highest": "#333535",
+                        "on-error": "#690005",
+                        "outline": "#958e9b",
+                        "surface-container-low": "#1a1c1c",
+                        "surface": "#121414",
+                        "tertiary-fixed": "#e5e2e1",
+                        "on-surface-variant": "#ccc4d1",
+                        "background": "#121414",
+                        "on-primary-fixed": "#270254",
+                        "surface-tint": "#d6baff",
+                        "on-primary-container": "#987aca",
+                        "inverse-surface": "#e2e2e2",
+                        "surface-container": "#1e2020",
+                        "primary-fixed": "#ecdcff",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary": "#313030",
+                        "outline-variant": "#4a4550",
+                        "surface-bright": "#37393a",
+                        "secondary-fixed": "#ffe088",
+                        "inverse-on-surface": "#2f3131",
+                        "primary": "#d6baff",
+                        "on-secondary-fixed-variant": "#574500"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "container-max": "1280px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "body-lg": ["Manrope"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "label-md": ["Manrope"],
+                        "headline-lg": ["Playfair Display"],
+                        "body-md": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        html {
+            overflow-x: hidden;
+        }
+
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        
+        /* Glassmorphism Utilities */
+        .glass-panel {
+            background: rgba(18, 20, 20, 0.6); /* surface-dim with opacity */
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(233, 195, 73, 0.15); /* secondary with opacity */
+        }
+        
+        .glass-card {
+            background: rgba(45, 11, 90, 0.4); /* primary-container with opacity */
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s ease;
+        }
+        
+        .glass-card:hover {
+            border-color: rgba(233, 195, 73, 0.4); /* secondary glow */
+            box-shadow: 0 0 20px rgba(233, 195, 73, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .service-card {
+            background: linear-gradient(145deg, rgba(45, 11, 69, 0.78), rgba(18, 20, 20, 0.72));
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.24);
+            transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .service-card:hover {
+            border-color: rgba(255, 215, 0, 0.82);
+            box-shadow: 0 24px 55px rgba(0, 0, 0, 0.38), 0 0 24px rgba(255, 215, 0, 0.1);
+            transform: translateY(-8px);
+        }
+
+        .service-card img {
+            transition: transform 0.6s ease;
+        }
+
+        .service-card:hover img {
+            transform: scale(1.08);
+        }
+
+        .service-card .service-icon {
+            background: rgba(255, 215, 0, 0.13);
+            border: 1px solid rgba(255, 215, 0, 0.45);
+        }
+
+        .gallery-marquee {
+            overflow: hidden;
+            mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+        }
+
+        .gallery-track {
+            display: flex;
+            width: max-content;
+            animation: gallery-scroll 34s linear infinite;
+        }
+
+        .gallery-marquee:hover .gallery-track,
+        .gallery-marquee:focus-within .gallery-track {
+            animation-play-state: paused;
+        }
+
+        .gallery-item {
+            width: clamp(220px, 28vw, 360px);
+            aspect-ratio: 4 / 3;
+            flex: 0 0 auto;
+            margin-right: 1.25rem;
+        }
+
+        @keyframes gallery-scroll {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        .service-card > div:first-child {
+            height: 11rem;
+        }
+
+        .service-card > div:last-child {
+            padding: 1.25rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.25rem;
+            line-height: 1.3;
+        }
+
+        /* The Anchor Special Component */
+        .the-anchor {
+            width: 1px;
+            background: linear-gradient(to bottom, transparent, theme('colors.secondary'), transparent);
+            opacity: 0.5;
+        }
+
+        /* Gold Gradient Text */
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #ffe088, #e9c349, #af8d11);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Premium Buttons */
+        .btn-primary {
+            background: linear-gradient(135deg, theme('colors.secondary-fixed'), theme('colors.secondary'));
+            color: theme('colors.on-secondary');
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            opacity: 0.9;
+            box-shadow: 0 4px 15px rgba(233, 195, 73, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 1px solid theme('colors.secondary');
+            color: theme('colors.on-surface');
+            transition: all 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background: rgba(233, 195, 73, 0.1);
+            color: theme('colors.secondary');
+        }
+
+        /* Ambient Glow */
+        .ambient-glow {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(45, 11, 90, 0.4) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Scroll Reveal Base */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hero-title {
+            animation: hero-title-in 1.2s ease-out both, hero-title-glow 4s ease-in-out 1.2s infinite;
+        }
+
+        .hero-copy-line {
+            display: block;
+            animation: hero-copy-in 0.8s ease-out both;
+        }
+
+        .hero-copy-line:nth-child(2) {
+            animation-delay: 0.8s;
+        }
+
+        @keyframes hero-title-in {
+            from {
+                opacity: 0;
+                transform: translateY(18px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes hero-title-glow {
+            0%, 100% {
+                text-shadow: 0 0 0 rgba(233, 195, 73, 0);
+            }
+            50% {
+                text-shadow: 0 0 22px rgba(233, 195, 73, 0.32);
+            }
+        }
+
+        @keyframes hero-copy-in {
+            from {
+                opacity: 0;
+                transform: translateY(14px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .hero-title,
+            .hero-copy-line {
+                animation: none;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden selection:bg-secondary selection:text-on-secondary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-lg border-b border-white/10 shadow-sm transition-all duration-300" id="navbar">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<a aria-label="Brij Kishore Asawa Events home" class="shrink-0 flex items-center" href="#">
+<img alt="Brij Kishore Asawa Events" class="h-12 w-auto max-w-[190px] object-contain md:h-14 md:max-w-[230px]" src="https://i.ibb.co/QjrPNr7t/image.png"/>
+</a>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-label-md text-label-md uppercase tracking-widest text-secondary font-bold border-b-2 border-secondary pb-1" href="#home">Home</a>
+<a class="font-label-md text-label-md uppercase tracking-widest text-on-surface/70 hover:text-secondary transition-colors hover:bg-white/5 px-2 py-1 rounded" href="#about">About</a>
+<a class="font-label-md text-label-md uppercase tracking-widest text-on-surface/70 hover:text-secondary transition-colors hover:bg-white/5 px-2 py-1 rounded" href="#services">Services</a>
+<a class="font-label-md text-label-md uppercase tracking-widest text-on-surface/70 hover:text-secondary transition-colors hover:bg-white/5 px-2 py-1 rounded" href="#gallery">Gallery</a>
+<a class="font-label-md text-label-md uppercase tracking-widest text-on-surface/70 hover:text-secondary transition-colors hover:bg-white/5 px-2 py-1 rounded" href="#contact">Contact</a>
+</div>
+<a class="hidden md:block bg-white text-primary-container hover:bg-secondary-fixed px-6 py-2 rounded-full font-label-md text-label-md tracking-wider cursor-pointer transition-colors active:scale-95" href="tel:+919866401730">Inquire Now</a>
+<!-- Mobile Menu Toggle -->
+<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" class="md:hidden text-on-surface cursor-pointer p-2" id="mobile-menu-toggle" type="button">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+<div class="hidden md:hidden border-t border-white/10 bg-surface/95 px-margin-mobile py-4 shadow-lg" id="mobile-menu">
+<div class="flex flex-col gap-2">
+<a class="mobile-menu-link font-label-md text-label-md uppercase tracking-widest text-secondary px-3 py-3" href="#home">Home</a>
+<a class="mobile-menu-link font-label-md text-label-md uppercase tracking-widest text-on-surface/80 hover:text-secondary px-3 py-3" href="#about">About</a>
+<a class="mobile-menu-link font-label-md text-label-md uppercase tracking-widest text-on-surface/80 hover:text-secondary px-3 py-3" href="#services">Services</a>
+<a class="mobile-menu-link font-label-md text-label-md uppercase tracking-widest text-on-surface/80 hover:text-secondary px-3 py-3" href="#gallery">Gallery</a>
+<a class="mobile-menu-link font-label-md text-label-md uppercase tracking-widest text-on-surface/80 hover:text-secondary px-3 py-3" href="#contact">Contact</a>
+<a class="mobile-menu-link bg-white text-primary-container text-center px-4 py-3 rounded-full font-label-md text-label-md tracking-wider" href="tel:+919866401730">Inquire Now</a>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden" id="home">
+<!-- Background Image with Overlay -->
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center bg-no-repeat absolute inset-0" data-alt="A breathtaking luxury wedding setup in a grand hall, illuminated by dramatic warm gold and deep purple ambient lighting. Ornate floral chandeliers hang above, casting soft glows on crystal centerpieces. The scene exudes high-end corporate luxury and celebratory elegance, capturing the pinnacle of event orchestration in a cinematic, magazine-style composition." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCSTa1dNIKJgObMywh6DTsHjzUHPZs4BmtVQHv9hK7wqNZx9anLyVTgbeqMrGsTEvQni9NmwzgMJuCVNJNjo6nag6qa0opkXLA5ZTeaegjWFUsLrpqW-Ku1A8rxk4rBUr1duWjIuKaRVHBe1Dm9Pi67xjkKZ4vRTQZipgg2EJUoOPlRkL9YhZWk6PzCkXk9bqReWXSME68goRzYivyYJZ7R3jYxQHeCjxtYbV9CcGBkeKGSmmWClq9r')"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-surface/80 via-primary-container/60 to-background"></div>
+</div>
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop text-center max-w-container-max mx-auto mt-16 md:mt-0">
+<span class="font-label-md text-label-md text-secondary tracking-[0.2em] uppercase mb-4 block">Premium Event Orchestration</span>
+<h1 class="hero-title font-headline-lg-mobile md:font-display-lg text-headline-lg-mobile md:text-display-lg text-on-surface mb-6 drop-shadow-lg">
+                    Brij Kishore Asawa Events
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-10">
+<span class="hero-copy-line">Professional Anchoring &amp; Complete Event Management tailored for the luxury market in Hyderabad.</span>
+<span class="hero-copy-line">We build unforgettable structural and aesthetic experiences.</span>
+                </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+<a class="btn-primary w-full sm:w-auto px-8 py-4 rounded-full font-label-md text-label-md uppercase tracking-wider flex items-center justify-center gap-2" href="tel:+919866401730">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">call</span>
+                        Call Now
+                    </a>
+<a class="btn-primary w-full sm:w-auto px-8 py-4 rounded-full font-label-md text-label-md uppercase tracking-wider flex items-center justify-center gap-2" href="https://wa.me/919866401730?text=Hello%20Brij%20Kishore%20Asawa%20Events%2C%20I%20would%20like%20to%20know%20more%20about%20your%20event%20services." target="_blank" rel="noopener">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+                        WhatsApp
+                    </a>
+</div>
+</div>
+<!-- Bottom Fade -->
+<div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-background to-transparent z-10"></div>
+</section>
+<!-- About Section with The Anchor -->
+<section class="relative py-24 md:py-32" id="about">
+<div class="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 the-anchor hidden md:block"></div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="reveal">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-[0.2em] mb-2 block">About Us</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-secondary mb-8">
+                            Creating Memorable Events with <span class="text-gradient-gold">Excellence</span>
+</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
+                            Welcome to <strong class="text-on-surface">Brij Kishore Asawa Events</strong>, your trusted event management and professional anchoring partner in Hyderabad. We specialize in transforming every celebration into an unforgettable experience through creative planning, elegant decorations, and flawless execution.
+                        </p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                            From weddings and receptions to birthday parties, Ganesh pandals, religious and cultural events, anniversaries, and family functions, our experienced team manages every detail with dedication and professionalism. We also provide premium stage decoration, venue setup, sound and lighting, event coordination, and high-quality printing services including invitation cards, visiting cards, stickers, ID cards, flex banners, and more.
+                        </p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                            At <strong class="text-on-surface">Brij Kishore Asawa Events</strong>, our mission is to deliver exceptional service, innovative designs, and memorable experiences while ensuring every event reflects your vision and style.
+                        </p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-1 bg-secondary"></div>
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface">From planning to execution, we make every occasion memorable.</span>
+</div>
+</div>
+<div class="relative reveal">
+<!-- Glassmorphism Image Container -->
+<div class="glass-panel p-4 rounded-2xl relative z-10">
+<img class="w-full h-[500px] object-cover rounded-xl shadow-2xl" data-alt="Brij Kishore Asawa Events celebration setup" src="https://i.ibb.co/ymmpcwGL/Screenshot-2026-08-19-102344.png"/>
+</div>
+<!-- Decorative background element -->
+<div class="absolute -top-8 -right-8 w-64 h-64 border border-secondary/20 rounded-full z-0"></div>
+<div class="absolute -bottom-8 -left-8 w-48 h-48 border border-secondary/30 rounded-full z-0"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="relative py-24 md:py-32 overflow-hidden" id="services">
+<div class="absolute inset-0 bg-gradient-to-b from-primary-container/20 via-background to-primary-container/10 pointer-events-none"></div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+<div class="text-center max-w-3xl mx-auto mb-14 md:mb-20 reveal">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-[0.25em] mb-4 block">Our Services</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-5">Complete Event <span class="text-gradient-gold">Experiences</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">We provide complete event management solutions with creativity, professionalism, and excellence.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
+<article class="service-card rounded-[20px] overflow-hidden reveal">
+<div class="h-56 overflow-hidden"><img alt="Professional anchoring and hosting event" class="w-full h-full object-cover" src="https://i.ibb.co/8LMgYtpW/image.png"/></div>
+<div class="p-6"><div class="service-icon w-12 h-12 rounded-full flex items-center justify-center text-secondary mb-5"><span class="material-symbols-outlined text-2xl">mic</span></div><h3 class="font-headline-md text-headline-md text-on-surface mb-3">Professional Anchoring &amp; Hosting</h3><p class="font-body-md text-body-md text-on-surface-variant mb-5">Professional anchoring for weddings, birthdays, corporate events, cultural programs, and live shows.</p></div>
+</article>
+<article class="service-card rounded-[20px] overflow-hidden reveal">
+<div class="h-56 overflow-hidden"><img alt="Luxury wedding mandap decoration" class="w-full h-full object-cover" src="https://i.ibb.co/7tnqPM1H/image.png"/></div>
+<div class="p-6"><div class="service-icon w-12 h-12 rounded-full flex items-center justify-center text-secondary mb-5"><span class="material-symbols-outlined text-2xl">favorite</span></div><h3 class="font-headline-md text-headline-md text-on-surface mb-3">Wedding Mandap Decoration</h3><p class="font-body-md text-body-md text-on-surface-variant mb-5">Elegant floral mandap decoration, stage setup, lighting, and complete wedding arrangements.</p></div>
+</article>
+<article class="service-card rounded-[20px] overflow-hidden reveal">
+<div class="h-56 overflow-hidden"><img alt="Ganesh festival pandal with beautiful decoration" class="w-full h-full object-cover" src="https://i.ibb.co/h1wQf7H5/image.png"/></div>
+<div class="p-6"><div class="service-icon w-12 h-12 rounded-full flex items-center justify-center text-secondary mb-5"><span class="material-symbols-outlined text-2xl">temple_hindu</span></div><h3 class="font-headline-md text-headline-md text-on-surface mb-3">Ganesh Pandal Decoration</h3><p class="font-body-md text-body-md text-on-surface-variant mb-5">Creative Ganesh pandal decoration, lighting, sound systems, and festival management.</p></div>
+</article>
+<article class="service-card rounded-[20px] overflow-hidden reveal">
+<div class="h-56 overflow-hidden"><img alt="Birthday party balloon decoration" class="w-full h-full object-cover" src="https://i.ibb.co/9mPZZRTD/image.png"/></div>
+<div class="p-6"><div class="service-icon w-12 h-12 rounded-full flex items-center justify-center text-secondary mb-5"><span class="material-symbols-outlined text-2xl">cake</span></div><h3 class="font-headline-md text-headline-md text-on-surface mb-3">Birthday Party Decoration</h3><p class="font-body-md text-body-md text-on-surface-variant mb-5">Theme-based birthday decorations, balloon setup, cake table, and party arrangements.</p></div>
+</article>
+<article class="service-card rounded-[20px] overflow-hidden reveal">
+<div class="h-56 overflow-hidden"><img alt="Elegant engagement and reception stage" class="w-full h-full object-cover" src="https://i.ibb.co/8nhY8jf2/image.png"/></div>
+<div class="p-6"><div class="service-icon w-12 h-12 rounded-full flex items-center justify-center text-secondary mb-5"><span class="material-symbols-outlined text-2xl">diamond</span></div><h3 class="font-headline-md text-headline-md text-on-surface mb-3">Engagement &amp; Reception</h3><p class="font-body-md text-body-md text-on-surface-variant mb-5">Beautiful engagement and reception stage decoration with premium floral themes.</p></div>
+</article>
+<article class="service-card rounded-[20px] overflow-hidden reveal">
+<div class="h-56 overflow-hidden"><img alt="Religious event setup with ceremonial decoration" class="w-full h-full object-cover" src="https://i.ibb.co/xtpKc2CP/image.png"/></div>
+<div class="p-6"><div class="service-icon w-12 h-12 rounded-full flex items-center justify-center text-secondary mb-5"><span class="material-symbols-outlined text-2xl">auto_awesome</span></div><h3 class="font-headline-md text-headline-md text-on-surface mb-3">Religious &amp; Cultural Events</h3><p class="font-body-md text-body-md text-on-surface-variant mb-5">Complete arrangements for poojas, religious ceremonies, and cultural events.</p></div>
+</article>
+<article class="service-card rounded-[20px] overflow-hidden reveal">
+<div class="h-56 overflow-hidden"><img alt="Family celebration stage with festive decoration" class="w-full h-full object-cover" src="https://i.ibb.co/GvKbRf7y/image.png"/></div>
+<div class="p-6"><div class="service-icon w-12 h-12 rounded-full flex items-center justify-center text-secondary mb-5"><span class="material-symbols-outlined text-2xl">celebration</span></div><h3 class="font-headline-md text-headline-md text-on-surface mb-3">Anniversary &amp; Family Functions</h3><p class="font-body-md text-body-md text-on-surface-variant mb-5">Customized decoration and event planning for anniversaries and family celebrations.</p></div>
+</article>
+<article class="service-card rounded-[20px] overflow-hidden reveal">
+<div class="h-56 overflow-hidden"><img alt="Decorated premium event venue" class="w-full h-full object-cover" src="https://i.ibb.co/MDF2QRPz/image.png"/></div>
+<div class="p-6"><div class="service-icon w-12 h-12 rounded-full flex items-center justify-center text-secondary mb-5"><span class="material-symbols-outlined text-2xl">format_paint</span></div><h3 class="font-headline-md text-headline-md text-on-surface mb-3">Stage &amp; Venue Decoration</h3><p class="font-body-md text-body-md text-on-surface-variant mb-5">Premium stage backdrop, entrance arch, floral decoration, and venue styling.</p></div>
+</article>
+<article class="service-card rounded-[20px] overflow-hidden reveal">
+<div class="h-56 overflow-hidden"><img alt="Professional sound and lighting setup" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&amp;fit=crop&amp;w=900&amp;q=85"/></div>
+<div class="p-6"><div class="service-icon w-12 h-12 rounded-full flex items-center justify-center text-secondary mb-5"><span class="material-symbols-outlined text-2xl">graphic_eq</span></div><h3 class="font-headline-md text-headline-md text-on-surface mb-3">Sound &amp; Lighting</h3><p class="font-body-md text-body-md text-on-surface-variant mb-5">High-quality sound systems, LED walls, stage lighting, DJ setup, and event coordination.</p></div>
+</article>
+<article class="service-card rounded-[20px] overflow-hidden reveal">
+<div class="h-56 overflow-hidden"><img alt="Invitation cards and premium printing materials" class="w-full h-full object-cover" src="https://i.ibb.co/QvbbDch4/image.png"/></div>
+<div class="p-6"><div class="service-icon w-12 h-12 rounded-full flex items-center justify-center text-secondary mb-5"><span class="material-symbols-outlined text-2xl">print</span></div><h3 class="font-headline-md text-headline-md text-on-surface mb-3">Printing Services</h3><p class="font-body-md text-body-md text-on-surface-variant mb-5">Visiting Cards, Invitation Cards, Stickers, ID Cards, Flex Banners, Digital Printing, and Custom Printing.</p></div>
+</article>
+</div>
+</div>
+</section>
+<!-- Visiting Cards Section -->
+<section class="relative py-20 md:py-24 overflow-hidden" id="visiting-cards">
+<div class="absolute inset-0 bg-gradient-to-b from-background via-primary-container/10 to-background pointer-events-none"></div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+<div class="text-center max-w-3xl mx-auto mb-12 reveal">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-[0.25em] mb-4 block">Printing Services</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-5">Visiting <span class="text-gradient-gold">Cards</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Premium business card finishes for every brand style.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4 max-w-5xl mx-auto">
+<div class="glass-panel rounded-xl overflow-hidden reveal"><img alt="Matte finish business cards" class="w-full h-44 object-cover" src="https://i.ibb.co/2D0DFJb/image.png"/><div class="p-5 grid grid-cols-[minmax(0,0.9fr)_minmax(0,1.5fr)] gap-4 items-start"><h3 class="font-label-md text-label-md text-secondary">Matte Finish Cards</h3><p class="font-body-md text-body-md text-on-surface-variant">Elegant, smooth finish for professional business use.</p></div></div>
+<div class="glass-panel rounded-xl overflow-hidden reveal"><img alt="Glossy finish business cards" class="w-full h-44 object-cover" src="https://i.ibb.co/wNgN88h6/image.png"/><div class="p-5 grid grid-cols-[minmax(0,0.9fr)_minmax(0,1.5fr)] gap-4 items-start"><h3 class="font-label-md text-label-md text-secondary">Glossy Finish Cards</h3><p class="font-body-md text-body-md text-on-surface-variant">Vibrant colors with a premium glossy look.</p></div></div>
+<div class="glass-panel rounded-xl overflow-hidden reveal"><img alt="Gold foil business cards" class="w-full h-44 object-cover" src="https://i.ibb.co/hRSHvHhB/image.png"/><div class="p-5 grid grid-cols-[minmax(0,0.9fr)_minmax(0,1.5fr)] gap-4 items-start"><h3 class="font-label-md text-label-md text-secondary">Gold Foil Cards</h3><p class="font-body-md text-body-md text-on-surface-variant">Luxury business cards with metallic gold foil printing.</p></div></div>
+<div class="glass-panel rounded-xl overflow-hidden reveal"><img alt="Spot UV printed business cards" class="w-full h-44 object-cover" src="https://i.ibb.co/Cs2X7Q8P/image.png"/><div class="p-5 grid grid-cols-[minmax(0,0.9fr)_minmax(0,1.5fr)] gap-4 items-start"><h3 class="font-label-md text-label-md text-secondary">Spot UV Cards</h3><p class="font-body-md text-body-md text-on-surface-variant">Highlight logos or text with premium UV coating.</p></div></div>
+<div class="glass-panel rounded-xl overflow-hidden reveal"><img alt="Textured paper business cards" class="w-full h-44 object-cover" src="https://i.ibb.co/dJXm116y/image.png"/><div class="p-5 grid grid-cols-[minmax(0,0.9fr)_minmax(0,1.5fr)] gap-4 items-start"><h3 class="font-label-md text-label-md text-secondary">Textured Cards</h3><p class="font-body-md text-body-md text-on-surface-variant">Premium textured paper for a sophisticated appearance.</p></div></div>
+<div class="glass-panel rounded-xl overflow-hidden reveal"><img alt="Kraft paper business cards" class="w-full h-44 object-cover" src="https://i.ibb.co/k2s1tRh2/image.png"/><div class="p-5 grid grid-cols-[minmax(0,0.9fr)_minmax(0,1.5fr)] gap-4 items-start"><h3 class="font-label-md text-label-md text-secondary">Kraft Paper Cards</h3><p class="font-body-md text-body-md text-on-surface-variant">Eco-friendly, natural brown paper business cards.</p></div></div>
+<div class="glass-panel rounded-xl overflow-hidden reveal"><img alt="Transparent PVC business cards" class="w-full h-44 object-cover" src="https://i.ibb.co/84cwzYbs/image.png"/><div class="p-5 grid grid-cols-[minmax(0,0.9fr)_minmax(0,1.5fr)] gap-4 items-start"><h3 class="font-label-md text-label-md text-secondary">Transparent PVC Cards</h3><p class="font-body-md text-body-md text-on-surface-variant">Modern plastic cards for premium branding.</p></div></div>
+<div class="glass-panel rounded-xl overflow-hidden reveal"><img alt="Plastic PVC business cards" class="w-full h-44 object-cover" src="https://i.ibb.co/cKh9hcSC/image.png"/><div class="p-5 grid grid-cols-[minmax(0,0.9fr)_minmax(0,1.5fr)] gap-4 items-start"><h3 class="font-label-md text-label-md text-secondary">Plastic PVC Cards</h3><p class="font-body-md text-body-md text-on-surface-variant">Waterproof, durable, and long-lasting business cards.</p></div></div>
+<div class="glass-panel rounded-xl overflow-hidden reveal"><img alt="Custom printed bill books" class="w-full h-44 object-cover" src="https://i.ibb.co/Mk8td4QH/image.png"/><div class="p-5 grid grid-cols-[minmax(0,0.9fr)_minmax(0,1.5fr)] gap-4 items-start"><h3 class="font-label-md text-label-md text-secondary">Bill Book Printing</h3><p class="font-body-md text-body-md text-on-surface-variant">Custom printed bill books for shops, offices, and businesses with high-quality paper and professional finishing.</p></div></div>
+<div class="glass-panel rounded-xl overflow-hidden reveal"><img alt="Premium printed menu cards" class="w-full h-44 object-cover" src="https://i.ibb.co/N611HtKR/image.png"/><div class="p-5 grid grid-cols-[minmax(0,0.9fr)_minmax(0,1.5fr)] gap-4 items-start"><h3 class="font-label-md text-label-md text-secondary">Menu Card Printing</h3><p class="font-body-md text-body-md text-on-surface-variant">Premium menu cards for restaurants, cafés, hotels, and food businesses with durable and elegant finishes.</p></div></div>
+<div class="glass-panel rounded-xl overflow-hidden reveal"><img alt="Beautiful invitation cards" class="w-full h-44 object-cover" src="https://i.ibb.co/ym58V8rW/image.png"/><div class="p-5 grid grid-cols-[minmax(0,0.9fr)_minmax(0,1.5fr)] gap-4 items-start"><h3 class="font-label-md text-label-md text-secondary">Invitation Cards</h3><p class="font-body-md text-body-md text-on-surface-variant">Beautiful invitation cards for weddings, birthdays, engagements, and all special occasions.</p></div></div>
+</div>
+</div>
+</section>
+<!-- Gallery Section -->
+<section class="relative py-24 md:py-32 overflow-hidden" id="gallery">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+<div class="text-center max-w-3xl mx-auto mb-12 reveal">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-[0.25em] mb-4 block">Event Gallery</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-secondary mb-5">Moments Worth <span class="text-gradient-gold">Remembering</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">A glimpse of the celebrations, stages, and experiences we create for every occasion.</p>
+</div>
+<div class="gallery-marquee reveal" tabindex="0" aria-label="Event photo gallery">
+<div class="gallery-track">
+<div class="gallery-item rounded-[20px] overflow-hidden border border-secondary/30 shadow-xl"><img alt="Elegant wedding stage decoration" class="w-full h-full object-cover" src="https://i.ibb.co/N6z1sQ0s/image.png"/></div>
+<div class="gallery-item rounded-[20px] overflow-hidden border border-secondary/30 shadow-xl"><img alt="Professional event host on stage" class="w-full h-full object-cover" src="https://i.ibb.co/LDhS47dR/image.png"/></div>
+<div class="gallery-item rounded-[20px] overflow-hidden border border-secondary/30 shadow-xl"><img alt="Beautiful floral event arrangement" class="w-full h-full object-cover" src="https://i.ibb.co/ynfYYvDZ/image.png"/></div>
+<div class="gallery-item rounded-[20px] overflow-hidden border border-secondary/30 shadow-xl"><img alt="Birthday celebration decoration" class="w-full h-full object-cover" src="https://i.ibb.co/MDgC2ZZM/image.png"/></div>
+<div class="gallery-item rounded-[20px] overflow-hidden border border-secondary/30 shadow-xl"><img alt="Premium reception venue styling" class="w-full h-full object-cover" src="https://i.ibb.co/35t24FVV/image.png"/></div>
+<div class="gallery-item rounded-[20px] overflow-hidden border border-secondary/30 shadow-xl"><img alt="Stage lighting and live event setup" class="w-full h-full object-cover" src="https://i.ibb.co/xQz8nWR/image.png"/></div>
+<div aria-hidden="true" class="gallery-item rounded-[20px] overflow-hidden border border-secondary/30 shadow-xl"><img alt="" class="w-full h-full object-cover" src="https://i.ibb.co/N6z1sQ0s/image.png"/></div>
+<div aria-hidden="true" class="gallery-item rounded-[20px] overflow-hidden border border-secondary/30 shadow-xl"><img alt="" class="w-full h-full object-cover" src="https://i.ibb.co/LDhS47dR/image.png"/></div>
+<div aria-hidden="true" class="gallery-item rounded-[20px] overflow-hidden border border-secondary/30 shadow-xl"><img alt="" class="w-full h-full object-cover" src="https://i.ibb.co/ynfYYvDZ/image.png"/></div>
+<div aria-hidden="true" class="gallery-item rounded-[20px] overflow-hidden border border-secondary/30 shadow-xl"><img alt="" class="w-full h-full object-cover" src="https://i.ibb.co/MDgC2ZZM/image.png"/></div>
+<div aria-hidden="true" class="gallery-item rounded-[20px] overflow-hidden border border-secondary/30 shadow-xl"><img alt="" class="w-full h-full object-cover" src="https://i.ibb.co/35t24FVV/image.png"/></div>
+<div aria-hidden="true" class="gallery-item rounded-[20px] overflow-hidden border border-secondary/30 shadow-xl"><img alt="" class="w-full h-full object-cover" src="https://i.ibb.co/xQz8nWR/image.png"/></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="relative py-24 md:py-32 bg-black/20" id="contact">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+<div class="text-center max-w-3xl mx-auto mb-14 reveal">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-[0.25em] mb-4 block">Let's Connect</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-secondary mb-5">Plan Your Perfect Event</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Share your event details with us and our team will connect with you on WhatsApp.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
+<div class="glass-panel rounded-[20px] p-8 md:p-10 reveal">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-[0.2em] mb-4 block">Brij Kishore Asawa Events</span>
+<h3 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-6">Your celebration, thoughtfully managed.</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">From professional anchoring to complete event management, we bring creativity, elegance, and flawless coordination to every occasion in Hyderabad.</p>
+<div class="space-y-5">
+<div class="flex items-start gap-4"><span class="material-symbols-outlined text-secondary text-2xl">location_on</span><div><p class="font-label-md text-label-md text-secondary uppercase tracking-wider mb-1">Location</p><p class="font-body-md text-body-md text-on-surface-variant">Hyderabad, Telangana</p></div></div>
+<div class="flex items-start gap-4"><span class="material-symbols-outlined text-secondary text-2xl">call</span><div><p class="font-label-md text-label-md text-secondary uppercase tracking-wider mb-1">Call Us</p><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="tel:+919866401730">+91 98664 01730</a></div></div>
+<div class="flex items-start gap-4"><span class="material-symbols-outlined text-secondary text-2xl">chat</span><div><p class="font-label-md text-label-md text-secondary uppercase tracking-wider mb-1">WhatsApp</p><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="https://wa.me/919866401730" target="_blank" rel="noopener">Chat with our event team</a></div></div>
+</div>
+<div class="mt-10 pt-6 border-t border-white/10"><p class="font-label-md text-label-md text-secondary uppercase tracking-wider mb-3">What we manage</p><p class="font-body-md text-body-md text-on-surface-variant">Weddings · Birthdays · Cultural Events · Stage Decor · Sound &amp; Lighting · Printing</p></div>
+</div>
+<form class="glass-panel rounded-[20px] p-8 md:p-10 reveal" id="contact-form">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Tell us about your event</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-7">Fill in your details and continue the conversation on WhatsApp.</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+<label class="block"><span class="font-label-md text-label-md text-on-surface mb-2 block">Full Name</span><input class="w-full rounded-lg bg-surface-container-high border border-white/10 text-on-surface placeholder:text-on-surface/40 focus:border-secondary focus:ring-secondary" name="name" placeholder="Your name" required type="text"/></label>
+<label class="block"><span class="font-label-md text-label-md text-on-surface mb-2 block">Phone Number</span><input class="w-full rounded-lg bg-surface-container-high border border-white/10 text-on-surface placeholder:text-on-surface/40 focus:border-secondary focus:ring-secondary" name="phone" placeholder="+91..." required type="tel"/></label>
+<label class="block"><span class="font-label-md text-label-md text-on-surface mb-2 block">Event Type</span><select class="w-full rounded-lg bg-surface-container-high border border-white/10 text-on-surface focus:border-secondary focus:ring-secondary" name="event" required><option value="">Select event type</option><option>Wedding / Reception</option><option>Birthday Party</option><option>Ganesh Pandal</option><option>Religious / Cultural Event</option><option>Corporate Event</option><option>Family Function</option><option>Other</option></select></label>
+<label class="block"><span class="font-label-md text-label-md text-on-surface mb-2 block">Event Date</span><input class="w-full rounded-lg bg-surface-container-high border border-white/10 text-on-surface focus:border-secondary focus:ring-secondary" name="date" type="date"/></label>
+<label class="block sm:col-span-2"><span class="font-label-md text-label-md text-on-surface mb-2 block">Venue / Location</span><input class="w-full rounded-lg bg-surface-container-high border border-white/10 text-on-surface placeholder:text-on-surface/40 focus:border-secondary focus:ring-secondary" name="location" placeholder="Event venue or area" type="text"/></label>
+<label class="block sm:col-span-2"><span class="font-label-md text-label-md text-on-surface mb-2 block">Event Details</span><textarea class="w-full rounded-lg bg-surface-container-high border border-white/10 text-on-surface placeholder:text-on-surface/40 focus:border-secondary focus:ring-secondary" name="details" placeholder="Tell us what you need for your event" rows="4"></textarea></label>
+</div>
+<button class="btn-primary mt-7 w-full px-6 py-4 rounded-full font-label-md text-label-md uppercase tracking-wider flex items-center justify-center gap-2" type="submit"><span class="material-symbols-outlined">chat</span>Connect on WhatsApp</button>
+<p aria-live="polite" class="font-body-md text-body-md text-secondary mt-4 text-center" id="contact-status"></p>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest w-full py-12 border-t border-white/5 relative z-10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<div class="font-headline-lg text-headline-lg text-secondary mb-2">BKA Events</div>
+<p class="font-body-lg text-body-lg text-on-surface mb-5">Creating Unforgettable Celebrations</p>
+<div class="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-x-6 gap-y-3 mb-5">
+<a class="font-body-md text-body-md text-on-surface/70 hover:text-secondary transition-colors flex items-center gap-2" href="tel:+919866401730"><span class="material-symbols-outlined text-secondary">call</span>+91 98664 01730</a>
+<a class="font-body-md text-body-md text-on-surface/70 hover:text-secondary transition-colors flex items-center gap-2 break-all" href="mailto:Brijkishoreasawa02@gmail.com"><span class="material-symbols-outlined text-secondary">mail</span>Brijkishoreasawa02@gmail.com</a>
+</div>
+<p class="font-body-md text-body-md text-on-surface/60 mb-6"><span class="material-symbols-outlined text-secondary align-middle mr-1">location_on</span>Kachiguda Station Road, Hyderabad - 500027</p>
+<nav class="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 mb-8" aria-label="Footer navigation">
+<a class="font-label-md text-label-md text-on-surface/60 hover:text-secondary transition-colors" href="#home">Home</a><span class="text-secondary">&bull;</span>
+<a class="font-label-md text-label-md text-on-surface/60 hover:text-secondary transition-colors" href="#about">About</a><span class="text-secondary">&bull;</span>
+<a class="font-label-md text-label-md text-on-surface/60 hover:text-secondary transition-colors" href="#services">Services</a><span class="text-secondary">&bull;</span>
+<a class="font-label-md text-label-md text-on-surface/60 hover:text-secondary transition-colors" href="#gallery">Gallery</a><span class="text-secondary">&bull;</span>
+<a class="font-label-md text-label-md text-on-surface/60 hover:text-secondary transition-colors" href="#contact">Contact</a>
+</nav>
+<div class="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-center items-center gap-3 font-body-md text-body-md text-on-surface/60">
+<p>&copy; 2026 <span class="text-on-surface">Brij Kishore Asawa Events</span>. All Rights Reserved.</p>
+<span class="hidden md:block text-secondary">&bull;</span>
+<p>Designed &amp; Developed by <a class="text-secondary hover:text-secondary-fixed transition-colors" href="https://shrivastavwebstudio.shop" target="_blank" rel="noopener">Shrivastav Web Studio</a></p>
+</div>
+</div>
+</footer>
+<!-- FABs -->
+<div class="fixed bottom-8 right-8 flex flex-col gap-4 z-50">
+<a aria-label="WhatsApp" class="w-14 h-14 bg-green-500 rounded-full flex items-center justify-center text-white shadow-lg hover:scale-110 transition-transform cursor-pointer" href="https://wa.me/919866401730?text=Hello%20Brij%20Kishore%20Asawa%20Events%2C%20I%20would%20like%20to%20know%20more%20about%20your%20event%20services." target="_blank" rel="noopener">
+<svg class="w-8 h-8 fill-current" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+</a>
+<a aria-label="Call" class="w-14 h-14 bg-gradient-to-r from-secondary-fixed to-secondary rounded-full flex items-center justify-center text-on-secondary shadow-lg hover:scale-110 transition-transform cursor-pointer" href="tel:+919866401730">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">call</span>
+</a>
+</div>
+<script>
+        // Scroll Reveal Logic
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal(); // Trigger on load
+
+        var mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+        var mobileMenu = document.getElementById("mobile-menu");
+        var mobileMenuLinks = document.querySelectorAll(".mobile-menu-link");
+
+        function closeMobileMenu() {
+            mobileMenu.classList.add("hidden");
+            mobileMenuToggle.setAttribute("aria-expanded", "false");
+            mobileMenuToggle.setAttribute("aria-label", "Open menu");
+            mobileMenuToggle.querySelector(".material-symbols-outlined").textContent = "menu";
+        }
+
+        mobileMenuToggle.addEventListener("click", function () {
+            var isOpen = !mobileMenu.classList.contains("hidden");
+            mobileMenu.classList.toggle("hidden", isOpen);
+            mobileMenuToggle.setAttribute("aria-expanded", String(!isOpen));
+            mobileMenuToggle.setAttribute("aria-label", isOpen ? "Open menu" : "Close menu");
+            mobileMenuToggle.querySelector(".material-symbols-outlined").textContent = isOpen ? "menu" : "close";
+        });
+
+        mobileMenuLinks.forEach(function (link) {
+            link.addEventListener("click", closeMobileMenu);
+        });
+
+        window.addEventListener("resize", function () {
+            if (window.innerWidth >= 768) {
+                closeMobileMenu();
+            }
+        });
+
+        document.getElementById("contact-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+            var formData = new FormData(event.currentTarget);
+            var message = "Hello Brij Kishore Asawa Events, I would like to enquire about an event.\n\n" +
+                "Name: " + formData.get("name") + "\n" +
+                "Phone: " + formData.get("phone") + "\n" +
+                "Event: " + formData.get("event") + "\n" +
+                "Date: " + (formData.get("date") || "Not decided") + "\n" +
+                "Venue: " + (formData.get("location") || "To be decided") + "\n" +
+                "Details: " + (formData.get("details") || "Please share more details.");
+            window.open("https://wa.me/919866401730?text=" + encodeURIComponent(message), "_blank");
+            document.getElementById("contact-status").textContent = "Opening WhatsApp with your enquiry...";
+        });
+    </script>
+</body></html>
